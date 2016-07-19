@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		280CD23B1D3DD1BD00EF2957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD23A1D3DD1BD00EF2957 /* AppDelegate.swift */; };
-		280CD23D1D3DD1BD00EF2957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD23C1D3DD1BD00EF2957 /* ViewController.swift */; };
 		280CD2401D3DD1BD00EF2957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280CD23E1D3DD1BD00EF2957 /* Main.storyboard */; };
 		280CD2431D3DD1BD00EF2957 /* beepLAH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2411D3DD1BD00EF2957 /* beepLAH.xcdatamodeld */; };
 		280CD2451D3DD1BD00EF2957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280CD2441D3DD1BD00EF2957 /* Assets.xcassets */; };
 		280CD2481D3DD1BD00EF2957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280CD2461D3DD1BD00EF2957 /* LaunchScreen.storyboard */; };
+		280CD2501D3DD35400EF2957 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 280CD24F1D3DD35400EF2957 /* GoogleService-Info.plist */; };
+		280CD2521D3E247400EF2957 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2511D3E247400EF2957 /* SignUpViewController.swift */; };
+		280CD2541D3E24AC00EF2957 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2531D3E24AC00EF2957 /* User.swift */; };
+		280CD2561D3E24D800EF2957 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2551D3E24D800EF2957 /* LoginViewController.swift */; };
+		280CD2581D3E2A4300EF2957 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2571D3E2A4300EF2957 /* CardsViewController.swift */; };
+		B401A5C32FAE20309353121A /* Pods_beepLAH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A9F538125E8DC6A9F1C435A /* Pods-beepLAH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beepLAH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beepLAH/Pods-beepLAH.debug.xcconfig"; sourceTree = "<group>"; };
 		280CD2371D3DD1BD00EF2957 /* beepLAH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beepLAH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280CD23A1D3DD1BD00EF2957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		280CD23C1D3DD1BD00EF2957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		280CD23F1D3DD1BD00EF2957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		280CD2421D3DD1BD00EF2957 /* beepLAH.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = beepLAH.xcdatamodel; sourceTree = "<group>"; };
 		280CD2441D3DD1BD00EF2957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280CD2471D3DD1BD00EF2957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280CD2491D3DD1BD00EF2957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280CD24F1D3DD35400EF2957 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		280CD2511D3E247400EF2957 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		280CD2531D3E24AC00EF2957 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		280CD2551D3E24D800EF2957 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		280CD2571D3E2A4300EF2957 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beepLAH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E68B46F42001BFAFF6FC4D18 /* Pods-beepLAH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beepLAH.release.xcconfig"; path = "Pods/Target Support Files/Pods-beepLAH/Pods-beepLAH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B401A5C32FAE20309353121A /* Pods_beepLAH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18DA37B81B9E01B3581C4AEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F538125E8DC6A9F1C435A /* Pods-beepLAH.debug.xcconfig */,
+				E68B46F42001BFAFF6FC4D18 /* Pods-beepLAH.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		280CD22E1D3DD1BD00EF2957 = {
 			isa = PBXGroup;
 			children = (
 				280CD2391D3DD1BD00EF2957 /* beepLAH */,
 				280CD2381D3DD1BD00EF2957 /* Products */,
+				18DA37B81B9E01B3581C4AEC /* Pods */,
+				FB8DDD78C3FE706FCE4DC99E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +81,26 @@
 			isa = PBXGroup;
 			children = (
 				280CD23A1D3DD1BD00EF2957 /* AppDelegate.swift */,
-				280CD23C1D3DD1BD00EF2957 /* ViewController.swift */,
+				280CD2511D3E247400EF2957 /* SignUpViewController.swift */,
+				280CD2531D3E24AC00EF2957 /* User.swift */,
+				280CD2551D3E24D800EF2957 /* LoginViewController.swift */,
 				280CD23E1D3DD1BD00EF2957 /* Main.storyboard */,
+				280CD2571D3E2A4300EF2957 /* CardsViewController.swift */,
 				280CD2441D3DD1BD00EF2957 /* Assets.xcassets */,
 				280CD2461D3DD1BD00EF2957 /* LaunchScreen.storyboard */,
 				280CD2491D3DD1BD00EF2957 /* Info.plist */,
 				280CD2411D3DD1BD00EF2957 /* beepLAH.xcdatamodeld */,
+				280CD24F1D3DD35400EF2957 /* GoogleService-Info.plist */,
 			);
 			path = beepLAH;
+			sourceTree = "<group>";
+		};
+		FB8DDD78C3FE706FCE4DC99E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 280CD24C1D3DD1BD00EF2957 /* Build configuration list for PBXNativeTarget "beepLAH" */;
 			buildPhases = (
+				8C135B93EBB41D28319C71BF /* [CP] Check Pods Manifest.lock */,
 				280CD2331D3DD1BD00EF2957 /* Sources */,
 				280CD2341D3DD1BD00EF2957 /* Frameworks */,
 				280CD2351D3DD1BD00EF2957 /* Resources */,
+				A9F8AA2C1D18707F8BB2E5D0 /* [CP] Embed Pods Frameworks */,
+				65B8EAF9FE8365A8E637F825 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				280CD2481D3DD1BD00EF2957 /* LaunchScreen.storyboard in Resources */,
+				280CD2501D3DD35400EF2957 /* GoogleService-Info.plist in Resources */,
 				280CD2451D3DD1BD00EF2957 /* Assets.xcassets in Resources */,
 				280CD2401D3DD1BD00EF2957 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +173,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65B8EAF9FE8365A8E637F825 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beepLAH/Pods-beepLAH-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C135B93EBB41D28319C71BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9F8AA2C1D18707F8BB2E5D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beepLAH/Pods-beepLAH-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		280CD2331D3DD1BD00EF2957 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280CD23D1D3DD1BD00EF2957 /* ViewController.swift in Sources */,
+				280CD2541D3E24AC00EF2957 /* User.swift in Sources */,
+				280CD2521D3E247400EF2957 /* SignUpViewController.swift in Sources */,
+				280CD2581D3E2A4300EF2957 /* CardsViewController.swift in Sources */,
 				280CD23B1D3DD1BD00EF2957 /* AppDelegate.swift in Sources */,
+				280CD2561D3E24D800EF2957 /* LoginViewController.swift in Sources */,
 				280CD2431D3DD1BD00EF2957 /* beepLAH.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +344,7 @@
 		};
 		280CD24D1D3DD1BD00EF2957 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9F538125E8DC6A9F1C435A /* Pods-beepLAH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = beepLAH/Info.plist;
@@ -264,6 +356,7 @@
 		};
 		280CD24E1D3DD1BD00EF2957 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E68B46F42001BFAFF6FC4D18 /* Pods-beepLAH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = beepLAH/Info.plist;
@@ -292,6 +385,7 @@
 				280CD24E1D3DD1BD00EF2957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
