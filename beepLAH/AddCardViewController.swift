@@ -17,6 +17,7 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.hidden = true
         merchantInfo()
         
         
