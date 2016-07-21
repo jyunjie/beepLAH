@@ -135,7 +135,7 @@
                         <outlet property="emailSignUpTextField" destination="jEg-qd-cXy" id="vq4-fx-ofI"/>
                         <outlet property="passWordSignUpTextField" destination="QiA-kE-NcF" id="Pbu-zR-XMk"/>
                         <outlet property="userNameSignUpTextField" destination="B6y-DG-dmY" id="9rb-uP-ZJT"/>
-                        <segue destination="YoQ-dh-Do3" kind="show" id="MpZ-R6-SHg"/>
+                        <segue destination="YoQ-dh-Do3" kind="show" identifier="HomeSegue" id="MpZ-R6-SHg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kQ-j7-GJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,7 +205,7 @@
         <!--QR Scan-->
         <scene sceneID="zA1-qA-GZO">
             <objects>
-                <viewController id="GSN-2a-OFe" sceneMemberID="viewController">
+                <viewController id="GSN-2a-OFe" customClass="QRCameraViewController" customModule="beepLAH" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8zW-Oj-U8Q"/>
                         <viewControllerLayoutGuide type="bottom" id="Ezb-9f-Xk9"/>
@@ -216,6 +216,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="QR Scan" id="TAs-dW-lyL"/>
+                    <connections>
+                        <outlet property="cameraScanningPreview" destination="g0W-9y-5xJ" id="hBX-K3-cA5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqw-D9-frW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,6 +379,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5tZ-ke-S9L"/>
+        <segue reference="MpZ-R6-SHg"/>
     </inferredMetricsTieBreakers>
 </document>
