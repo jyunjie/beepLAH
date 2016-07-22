@@ -16,13 +16,15 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     let firebaseRef = FIRDatabase.database().reference()
     var info = [String]()
     var cards = [Card]()
+    var usersSet = Set<String>()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.hidden = false
-        getUserCardInfo()
+        getUserSets()
+        
         
         // Do any additional setup after loading the view.
     }
@@ -55,18 +57,22 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func getUserCardInfo() {
         let cardInfo = firebaseRef.child("cards")
         cardInfo.observeEventType(.ChildAdded, withBlock: { (snapshot) in
-            if let cardInfos = snapshot.value as? [String:AnyObject] {
-                let card = Card()
-                let name = cardInfos["Name"] as! String
-                card.name = name
-                let cardNo = cardInfos["CardNo"] as! String
-                card.No = cardNo
-                let expDate = cardInfos["Card Expiry Date"] as! String
-                card.expDate = expDate
-                let points =  cardInfos["Points"] as! String
-                card.point = points
-                self.cards.append(card)
-                self.collectionView.reloadData()
+//            let cardUIDs = snapshot.key
+            if self.usersSet.contains(snapshot.key){
+                if let cardInfos = snapshot.value as? [String:AnyObject] {
+                    let card = Card()
+                    let name = cardInfos["Name"] as! String
+                    card.name = name
+                    let cardNo = cardInfos["CardNo"] as! String
+                    card.No = cardNo
+                    let expDate = cardInfos["Card Expiry Date"] as! String
+                    card.expDate = expDate
+                    let points =  cardInfos["Points"] as! String
+                    card.point = points
+                    self.cards.append(card)
+                    self.collectionView.reloadData()
+                    
+                }
             }
             
         })
@@ -89,5 +95,15 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         return nil
     }
     
+    func getUserSets() {
+        let userInfo = firebaseRef.child("users").child(User.currentUserUid()!).child("UserCards")
+        print(userInfo)
+        userInfo.observeEventType(.ChildAdded, withBlock: { (snapshot) in
+            self.usersSet.insert(snapshot.key)
+            self.getUserCardInfo()
+            
+        })
+        
+    }
     
 }
