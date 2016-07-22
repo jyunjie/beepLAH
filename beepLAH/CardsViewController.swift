@@ -105,9 +105,12 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
                 }
             }
             self.getUserCardInfo()
-            })
+        })
         
         
     }
+    
+
+    
     
 }
