@@ -57,8 +57,8 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func getUserCardInfo() {
         let cardInfo = firebaseRef.child("cards")
         cardInfo.observeEventType(.ChildAdded, withBlock: { (snapshot) in
-//            let cardUIDs = snapshot.key
-            if self.usersSet.contains(snapshot.key){
+            //            let cardUIDs = snapshot.key
+            if self.usersSet.contains(snapshot.key) {
                 if let cardInfos = snapshot.value as? [String:AnyObject] {
                     let card = Card()
                     let name = cardInfos["Name"] as! String
@@ -98,11 +98,15 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func getUserSets() {
         let userInfo = firebaseRef.child("users").child(User.currentUserUid()!).child("UserCards")
         print(userInfo)
-        userInfo.observeEventType(.ChildAdded, withBlock: { (snapshot) in
-            self.usersSet.insert(snapshot.key)
+        userInfo.observeEventType(.Value, withBlock: { (snapshot) in
+            if let dict = snapshot.value as? [String: AnyObject] {
+                for (key, _) in dict{
+                    self.usersSet.insert(key)
+                }
+            }
             self.getUserCardInfo()
-            
-        })
+            })
+        
         
     }
     
