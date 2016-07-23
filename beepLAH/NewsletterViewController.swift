@@ -36,7 +36,7 @@ class NewsletterViewController: UIViewController, UICollectionViewDelegate, UICo
         let selectedItems = self.cards[indexPath.row]
         cell.cardImageView.image = UIImage(named: selectedItems.name!)
         if selectedItems.name == "Starbucks"{
-            cell.newsletterPosterImageView.image = UIImage(named:"posterstarbucks")
+            cell.newsletterPosterImageView.image = UIImage(named:"posterstarbuck")
         } else if selectedItems.name == "Golden Screen Cinemas"{
             cell.newsletterPosterImageView.image = UIImage(named:"postergoldenscreencinemas")
         } else if selectedItems.name == "Bonuslink"{

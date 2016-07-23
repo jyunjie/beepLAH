@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Add Card View Controller-->
@@ -20,33 +21,40 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLt-0G-w6P">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vyX-xu-Cml">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vyX-xu-Cml">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddCardCell" textLabel="cWi-VH-Jik" detailTextLabel="vih-Zw-5Ph" style="IBUITableViewCellStyleSubtitle" id="3io-ff-H8n">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddCardCell" rowHeight="101" id="3io-ff-H8n" customClass="AddCardTableViewCell" customModule="beepLAH" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3io-ff-H8n" id="s3P-9a-OU3">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="101"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cWi-VH-Jik">
-                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vih-Zw-5Ph">
-                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-mH-Sze">
+                                                    <rect key="frame" x="8" y="0.0" width="166" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="166" id="NPM-vu-YT0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCB-PO-v0n">
+                                                    <rect key="frame" x="204" y="29" width="372" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ahS-mH-Sze" firstAttribute="leading" secondItem="s3P-9a-OU3" secondAttribute="leadingMargin" id="Lz3-7b-g7Q"/>
+                                                <constraint firstItem="ahS-mH-Sze" firstAttribute="top" secondItem="s3P-9a-OU3" secondAttribute="top" id="WTJ-ti-0jU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ahS-mH-Sze" secondAttribute="bottom" constant="2.5" id="aPP-se-5YJ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardImage" destination="ahS-mH-Sze" id="qDj-lo-g2y"/>
+                                            <outlet property="cardLabel" destination="zCB-PO-v0n" id="Ftv-Th-CIS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -332,7 +340,7 @@
                             <constraint firstItem="NzI-cK-vKc" firstAttribute="leading" secondItem="yyo-vh-lUV" secondAttribute="leading" id="yW5-cl-i9c"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="1pM-lE-0w9"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="1pM-lE-0w9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGV-h5-BOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="QR Scan" id="TAs-dW-lyL"/>
+                    <tabBarItem key="tabBarItem" title="QR Scan" image="camera@1x" id="TAs-dW-lyL"/>
                     <connections>
                         <outlet property="cameraScanningPreview" destination="g0W-9y-5xJ" id="hBX-K3-cA5"/>
                     </connections>
@@ -372,32 +380,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-o9-NzC">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-o9-NzC">
+                                <rect key="frame" x="0.0" y="20" width="539" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RSL-aq-lJt">
-                                    <size key="itemSize" width="382" height="530"/>
+                                    <size key="itemSize" width="440" height="530"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsletterCell" id="nJK-0c-rAP" customClass="NewsletterCollectionViewCell" customModule="beepLAH" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-24" width="382" height="530"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="NewsletterCell" id="nJK-0c-rAP" customClass="NewsletterCollectionViewCell" customModule="beepLAH" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-24" width="440" height="530"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="530"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="440" height="530"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYg-dL-qau">
-                                                    <rect key="frame" x="50" y="0.0" width="283" height="388"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NYg-dL-qau">
+                                                    <rect key="frame" x="71" y="32" width="283" height="364"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isq-d6-6BM">
-                                                    <rect key="frame" x="71" y="394" width="244" height="128"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="isq-d6-6BM">
+                                                    <rect key="frame" x="92" y="402" width="244" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="Jux-zT-CNp"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="isq-d6-6BM" firstAttribute="leading" secondItem="nJK-0c-rAP" secondAttribute="leadingMargin" constant="84" id="7ip-VQ-k6D"/>
+                                            <constraint firstItem="isq-d6-6BM" firstAttribute="top" secondItem="NYg-dL-qau" secondAttribute="bottom" constant="6" id="Q9x-l5-5Cz"/>
+                                            <constraint firstAttribute="bottom" secondItem="isq-d6-6BM" secondAttribute="bottom" id="Rz2-Eq-w3r"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="NYg-dL-qau" secondAttribute="trailing" constant="78" id="Y5d-7M-5ls"/>
+                                            <constraint firstItem="NYg-dL-qau" firstAttribute="leading" secondItem="nJK-0c-rAP" secondAttribute="leadingMargin" constant="63" id="jHt-HF-oNc"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="isq-d6-6BM" secondAttribute="trailing" constant="96" id="v4I-pC-avU"/>
+                                            <constraint firstItem="NYg-dL-qau" firstAttribute="top" secondItem="nJK-0c-rAP" secondAttribute="topMargin" constant="24" id="yVE-jn-MBe"/>
+                                        </constraints>
+                                        <size key="customSize" width="440" height="530"/>
                                         <connections>
                                             <outlet property="cardImageView" destination="isq-d6-6BM" id="0wC-Ks-Ob9"/>
                                             <outlet property="newsletterPosterImageView" destination="NYg-dL-qau" id="OJJ-Jp-2zy"/>
@@ -412,13 +433,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="o8F-o9-NzC" secondAttribute="trailing" id="mTg-Px-i8q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o8F-o9-NzC" secondAttribute="trailing" constant="41" id="0Hl-Zq-QGH"/>
                             <constraint firstItem="1ic-g0-5dk" firstAttribute="top" secondItem="o8F-o9-NzC" secondAttribute="bottom" id="qab-zQ-77z"/>
                             <constraint firstItem="o8F-o9-NzC" firstAttribute="top" secondItem="eeh-Bv-2JS" secondAttribute="bottom" id="tlV-W0-2Bx"/>
                             <constraint firstItem="o8F-o9-NzC" firstAttribute="leading" secondItem="SLP-nk-81I" secondAttribute="leading" id="yOG-ap-e5R"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Newsletter" id="Ph5-Ue-2S0"/>
+                    <tabBarItem key="tabBarItem" title="Newsletter" image="basic_message" id="Ph5-Ue-2S0"/>
                     <connections>
                         <outlet property="collectionView" destination="o8F-o9-NzC" id="b1k-Tj-nEe"/>
                     </connections>
@@ -465,8 +486,14 @@
                                     <segue destination="A7w-pd-N86" kind="show" identifier="SignUpSegue" id="8K6-dZ-l6J"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="beepLAH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCH-Dt-dWt">
+                                <rect key="frame" x="240" y="77" width="130" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98314505815505981" green="0.25612619519233704" blue="0.030020749196410179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="emailSignInTxtFld" destination="Y6a-sk-6JP" id="Fss-xJ-SKi"/>
@@ -502,7 +529,7 @@
         <scene sceneID="0uc-uT-hY1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZJS-9w-Bbm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cards" id="i4n-Le-FYz"/>
+                    <tabBarItem key="tabBarItem" title="Cards" image="card" id="i4n-Le-FYz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tIg-pD-nUT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -518,6 +545,12 @@
             <point key="canvasLocation" x="425" y="253"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="basic_message" width="25" height="22"/>
+        <image name="camera@1x" width="25" height="21"/>
+        <image name="card" width="25" height="17"/>
+        <image name="map" width="25" height="22"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5tZ-ke-S9L"/>
     </inferredMetricsTieBreakers>

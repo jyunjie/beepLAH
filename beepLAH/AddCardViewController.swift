@@ -33,9 +33,10 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("AddCardCell", forIndexPath: indexPath)
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("AddCardCell", forIndexPath: indexPath) as! AddCardTableViewCell
         let items = self.merchantList[indexPath.row]
-        cell.textLabel?.text = items
+        cell.cardLabel.text = items
+        cell.cardImage.image = UIImage(named: items)
         return cell
     }
     
@@ -45,6 +46,10 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
         let alert = UIAlertController(title: self.merchantList[indexPath.row], message: "Please fill in your information", preferredStyle: .Alert)
         
         //2. Add the text field. You can configure it however you need.
+        alert.addTextFieldWithConfigurationHandler({ (cardOwnertextField) -> Void in
+            cardOwnertextField.placeholder = "Card Owner"
+        })
+        
         alert.addTextFieldWithConfigurationHandler({ (cardNotextField) -> Void in
             cardNotextField.placeholder = "Card Number"
         })
@@ -56,18 +61,22 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
         //3. Grab the value from the text field, and print it when the user clicks OK.
         
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            let cardNotextField = alert.textFields![0] as UITextField
-            let cardExpDatetextField = alert.textFields![1] as UITextField
+            let cardOwnertextField = alert.textFields![0] as UITextField
+            let cardNotextField = alert.textFields![1] as UITextField
+            let cardExpDatetextField = alert.textFields![2] as UITextField
             
             let cardUID = NSUUID().UUIDString
             let cardsInfoRef = self.firebaseRef.child("cards").child(cardUID)
-            let cardDict = ["Name":(self.merchantList[indexPath.row]),"CardNo":cardNotextField.text!,"Card Expiry Date": cardExpDatetextField.text!,"Points":"1000"] as [String:AnyObject]
+            let cardDict = ["Card Owner":cardOwnertextField.text!,"Name":(self.merchantList[indexPath.row]),"CardNo":cardNotextField.text!,"Card Expiry Date": cardExpDatetextField.text!,"Points":"1000"] as [String:AnyObject]
             cardsInfoRef.setValue(cardDict)
             self.firebaseRef.child("users").child(User.currentUserUid()!).child("UserCards").child(cardUID).setValue(true)
+            self.navigationController?.popViewControllerAnimated(true)
             
         }))
         
-
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: {(ACTION) -> Void in
+        }))
+        
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)

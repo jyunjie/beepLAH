@@ -43,14 +43,12 @@ class LoginViewController: UIViewController {
         
         //add the activity indicator as a subview of the alert controller's view
         pending.view.addSubview(indicator)
-        indicator.userInteractionEnabled = false // required otherwise if there buttons in the UIAlertController you will not be able to press them
+        indicator.userInteractionEnabled = false
         indicator.startAnimating()
-        
         self.presentViewController(pending, animated: false, completion: nil)
-        
         FIRAuth.auth()?.signInWithEmail(email, password: password) { (user, error) in
             if let user = user {
-                User .signIn(user.uid)
+                User.signIn(user.uid)
                 pending.dismissViewControllerAnimated(true, completion: {
                     indicator.stopAnimating()
                     self.performSegueWithIdentifier("HomeSegue", sender: nil)
@@ -74,20 +72,6 @@ class LoginViewController: UIViewController {
         if segue.identifier == "SignUpSegue"
         {
             _ = segue.destinationViewController as! SignUpViewController
-        } else{
-            
-            //            let navVc = segue.destinationViewController as! UINavigationController // 1
-            //            let chatVc = navVc.viewControllers.first as! ChatViewController // 2
-            //            chatVc.senderId = User.currentUserUid()  // 3
-            //            chatVc.senderDisplayName = "" // 4
-            //            chatVc.title = " ChatRoom"
-            //            let rootRef = FIRDatabase.database().reference()
-            //            var list: FIRDatabaseReference!
-            //            list = rootRef.child("users")
-            //            print(list)
-            //
-            //            print(rootRef)
-            
         }
     }
     

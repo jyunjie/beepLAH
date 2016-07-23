@@ -15,5 +15,6 @@ class Card {
     var name: String?
     var expDate: String?
     var point : String?
+    var ownerName : String?
     
 }

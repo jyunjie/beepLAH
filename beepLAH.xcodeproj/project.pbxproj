@@ -27,6 +27,7 @@
 		28D9C7BE1D40B484008656D9 /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7BD1D40B484008656D9 /* Merchant.swift */; };
 		28D9C7C01D40BDA7008656D9 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7BF1D40BDA7008656D9 /* CardCollectionViewCell.swift */; };
 		28D9C7C21D40C58C008656D9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 28D9C7C11D40C58C008656D9 /* .gitignore */; };
+		28D9C7C41D4396DE008656D9 /* AddCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7C31D4396DE008656D9 /* AddCardTableViewCell.swift */; };
 		B401A5C32FAE20309353121A /* Pods_beepLAH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		28D9C7BD1D40B484008656D9 /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 		28D9C7BF1D40BDA7008656D9 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		28D9C7C11D40C58C008656D9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		28D9C7C31D4396DE008656D9 /* AddCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardTableViewCell.swift; sourceTree = "<group>"; };
 		BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beepLAH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68B46F42001BFAFF6FC4D18 /* Pods-beepLAH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beepLAH.release.xcconfig"; path = "Pods/Target Support Files/Pods-beepLAH/Pods-beepLAH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				280CD2511D3E247400EF2957 /* SignUpViewController.swift */,
 				280CD2531D3E24AC00EF2957 /* User.swift */,
 				28D9C7B71D40ACB9008656D9 /* AddCardViewController.swift */,
+				28D9C7C31D4396DE008656D9 /* AddCardTableViewCell.swift */,
 				28D9C7BD1D40B484008656D9 /* Merchant.swift */,
 				280CD2551D3E24D800EF2957 /* LoginViewController.swift */,
 				280CD23E1D3DD1BD00EF2957 /* Main.storyboard */,
@@ -268,6 +271,7 @@
 				280CD2561D3E24D800EF2957 /* LoginViewController.swift in Sources */,
 				28D9C7C01D40BDA7008656D9 /* CardCollectionViewCell.swift in Sources */,
 				28D9C7B21D40AA7F008656D9 /* NewsletterViewController.swift in Sources */,
+				28D9C7C41D4396DE008656D9 /* AddCardTableViewCell.swift in Sources */,
 				28D9C7BE1D40B484008656D9 /* Merchant.swift in Sources */,
 				280CD2431D3DD1BD00EF2957 /* beepLAH.xcdatamodeld in Sources */,
 				28D9C7B01D40A892008656D9 /* QRCameraViewController.swift in Sources */,
