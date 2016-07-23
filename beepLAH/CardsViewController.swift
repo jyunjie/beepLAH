@@ -17,16 +17,19 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     var info = [String]()
     var cards = [Card]()
     var usersSet = Set<String>()
+    var myActivityIndicator = UIActivityIndicatorView()
     
     
-    
-    override func viewDidLoad() {
+    override func viewWillAppear(animated: Bool) {
         super.viewDidLoad()
+        self.myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        myActivityIndicator.center = view.center
+        myActivityIndicator.startAnimating()
+        view.addSubview(myActivityIndicator)
+        self.cards.removeAll()
+        self.usersSet.removeAll()
         self.tabBarController?.tabBar.hidden = false
         getUserSets()
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,7 +52,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         cell.cardMerchantName.text = selectedItems.name
         cell.cardImage.image = UIImage(named: selectedItems.name!)
         cell.cardNumber.text = selectedItems.No
-        let image = generateQRCodeFromString(selectedItems.No!)
+        let image = generateQRCodeFromString(selectedItems.No! +  selectedItems.ownerName!)
         cell.QRImageView.image = image
         return cell
     }
@@ -57,10 +60,11 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func getUserCardInfo() {
         let cardInfo = firebaseRef.child("cards")
         cardInfo.observeEventType(.ChildAdded, withBlock: { (snapshot) in
-            //            let cardUIDs = snapshot.key
             if self.usersSet.contains(snapshot.key) {
                 if let cardInfos = snapshot.value as? [String:AnyObject] {
                     let card = Card()
+                    let cardOwner = cardInfos["Card Owner"] as! String
+                    card.ownerName = cardOwner
                     let name = cardInfos["Name"] as! String
                     card.name = name
                     let cardNo = cardInfos["CardNo"] as! String
@@ -71,6 +75,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
                     card.point = points
                     self.cards.append(card)
                     self.collectionView.reloadData()
+                    self.myActivityIndicator.stopAnimating()
                     
                 }
             }
@@ -97,7 +102,6 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func getUserSets() {
         let userInfo = firebaseRef.child("users").child(User.currentUserUid()!).child("UserCards")
-        print(userInfo)
         userInfo.observeEventType(.Value, withBlock: { (snapshot) in
             if let dict = snapshot.value as? [String: AnyObject] {
                 for (key, _) in dict{
@@ -105,9 +109,12 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
                 }
             }
             self.getUserCardInfo()
-            })
+        })
         
         
     }
+    
+
+    
     
 }
