@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         pending.view.alpha = 0.2
         //create an activity indicator
         let rect = CGRect(
-            origin: CGPoint(x: -60, y: 0),
+            origin: CGPoint(x: 0, y: 0),
             size: UIScreen.mainScreen().bounds.size
         )
         let indicator = UIActivityIndicatorView()
