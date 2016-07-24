@@ -28,6 +28,7 @@
 		28D9C7C01D40BDA7008656D9 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7BF1D40BDA7008656D9 /* CardCollectionViewCell.swift */; };
 		28D9C7C21D40C58C008656D9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 28D9C7C11D40C58C008656D9 /* .gitignore */; };
 		28D9C7C41D4396DE008656D9 /* AddCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7C31D4396DE008656D9 /* AddCardTableViewCell.swift */; };
+		28D9C7EF1D4500AC008656D9 /* Beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 28D9C7EE1D4500AC008656D9 /* Beep.wav */; };
 		B401A5C32FAE20309353121A /* Pods_beepLAH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		28D9C7BF1D40BDA7008656D9 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		28D9C7C11D40C58C008656D9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		28D9C7C31D4396DE008656D9 /* AddCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardTableViewCell.swift; sourceTree = "<group>"; };
+		28D9C7EE1D4500AC008656D9 /* Beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Beep.wav; sourceTree = "<group>"; };
 		BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beepLAH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68B46F42001BFAFF6FC4D18 /* Pods-beepLAH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beepLAH.release.xcconfig"; path = "Pods/Target Support Files/Pods-beepLAH/Pods-beepLAH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				28D9C7B91D40AFDC008656D9 /* Card.swift */,
 				28D9C7B31D40AAB4008656D9 /* NewsletterCollectionViewCell.swift */,
 				28D9C7B11D40AA7F008656D9 /* NewsletterViewController.swift */,
+				28D9C7EE1D4500AC008656D9 /* Beep.wav */,
 				280CD2571D3E2A4300EF2957 /* CardsViewController.swift */,
 				28D9C7AF1D40A892008656D9 /* QRCameraViewController.swift */,
 				280CD2441D3DD1BD00EF2957 /* Assets.xcassets */,
@@ -202,6 +205,7 @@
 				280CD2481D3DD1BD00EF2957 /* LaunchScreen.storyboard in Resources */,
 				280CD2501D3DD35400EF2957 /* GoogleService-Info.plist in Resources */,
 				280CD2451D3DD1BD00EF2957 /* Assets.xcassets in Resources */,
+				28D9C7EF1D4500AC008656D9 /* Beep.wav in Resources */,
 				280CD2401D3DD1BD00EF2957 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,10 @@
 import UIKit
 import MTBBarcodeScanner
 import Firebase
+import AVFoundation
 
 class QRCameraViewController: UIViewController {
-    
+    var audioPlayer: AVAudioPlayer!
     var scanner: MTBBarcodeScanner!
     let firebaseRef = FIRDatabase.database().reference()
     @IBOutlet weak var cameraScanningPreview: UIView!
@@ -31,7 +32,7 @@ class QRCameraViewController: UIViewController {
                     if let code: AVMetadataMachineReadableCodeObject = codes.first as? AVMetadataMachineReadableCodeObject {
                         print(code.type)
                         print(code.stringValue)
-                        
+                        self.playVes()
                         if code.stringValue == "Starbucks 100 points" {
                             let alertController = UIAlertController(title: "Thank you for visiting Starbucks", message: "Additional points had been accredited", preferredStyle: .Alert)
                             
@@ -65,6 +66,16 @@ class QRCameraViewController: UIViewController {
                 })
             }
         })
+    }
+    
+    func playVes() {
+        do {
+            self.audioPlayer =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Beep", ofType: "wav")!))
+            self.audioPlayer.play()
+            
+        } catch {
+            print("Error")
+        }
     }
 }
 
