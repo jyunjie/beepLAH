@@ -148,14 +148,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ij5-13-pbe">
-                                <rect key="frame" x="20" y="72" width="55" height="30"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="logOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUR-NU-vH2"/>
-                                    <segue destination="ZfW-Lb-ep4" kind="unwind" unwindAction="unwindToMenu:" id="Ayy-Uq-C7o"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-wv-6QP">
                                 <rect key="frame" x="-7" y="115" width="544" height="441"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -167,7 +159,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="lVL-Rk-Wfe" customClass="CardCollectionViewCell" customModule="beepLAH" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="4" width="542" height="433"/>
+                                        <rect key="frame" x="0.0" y="11.5" width="542" height="433"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="542" height="433"/>
@@ -211,9 +203,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Cards" id="zM2-ch-Tx8">
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="zmm-lJ-sNr">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="Whz-LA-beO">
                             <connections>
-                                <segue destination="MSP-Ak-Lx3" kind="show" id="NEH-b4-Uim"/>
+                                <action selector="settingsBtn:" destination="BYZ-38-t0r" id="jkM-QG-1Fg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" id="sxG-nQ-B4p">
@@ -224,6 +216,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Bph-wv-6QP" id="Sqk-Pe-3bB"/>
+                        <segue destination="ZfW-Lb-ep4" kind="unwind" identifier="UnwindSegue" unwindAction="unwindToMenu:" id="H9k-Wa-Efv"/>
+                        <segue destination="MSP-Ak-Lx3" kind="show" identifier="ProfileSegue" id="fSc-7J-7FA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -273,7 +267,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to beepLAH !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSx-r0-3dh">
-                                <rect key="frame" x="73" y="20" width="291" height="86"/>
+                                <rect key="frame" x="145" y="20" width="291" height="86"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -663,6 +657,6 @@
         <image name="sb" width="549" height="832"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5tZ-ke-S9L"/>
+        <segue reference="MpZ-R6-SHg"/>
     </inferredMetricsTieBreakers>
 </document>

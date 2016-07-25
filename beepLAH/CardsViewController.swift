@@ -37,11 +37,6 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func logOut(sender: AnyObject) {
-        try! FIRAuth.auth()!.signOut()
-        User.removeUserUid()
-    }
-    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.cards.count
     }
@@ -112,6 +107,32 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         })
         
         
+    }
+    @IBAction func settingsBtn(sender: UIBarButtonItem) {
+        
+        let alertController = UIAlertController(title: nil, message: "Settings", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        }
+        alertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "Profile", style: .Default) { (action) in
+           self.performSegueWithIdentifier("ProfileSegue", sender: self)
+        }
+        alertController.addAction(OKAction)
+        
+        let logOutAction = UIAlertAction(title: "Log Out", style: .Default) { (action) in
+            try! FIRAuth.auth()!.signOut()
+            User.removeUserUid()
+//            self.performSegueWithIdentifier: "UnwindSegue" sender:self
+            self.performSegueWithIdentifier("UnwindSegue", sender: self)
+        
+        }
+        alertController.addAction(logOutAction)
+        
+        self.presentViewController(alertController, animated: true) {
+            
+        }
     }
     
 
