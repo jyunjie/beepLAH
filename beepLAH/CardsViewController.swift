@@ -124,7 +124,6 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let logOutAction = UIAlertAction(title: "Log Out", style: .Default) { (action) in
             try! FIRAuth.auth()!.signOut()
             User.removeUserUid()
-//            self.performSegueWithIdentifier: "UnwindSegue" sender:self
             self.performSegueWithIdentifier("UnwindSegue", sender: self)
         
         }
@@ -134,8 +133,5 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
             
         }
     }
-    
-
-    
     
 }
