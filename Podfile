@@ -8,9 +8,10 @@ target 'beepLAH' do
   # Pods for beepLAH
 pod 'Firebase'
 pod 'Firebase/Database'
-pod 'Firebase/Storage'
 pod 'Firebase/Auth'
 pod 'MBProgressHUD'
 pod 'MTBBarcodeScanner'
+pod 'SwiftyJSON'
+pod 'Fusuma'
 
 end

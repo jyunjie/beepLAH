@@ -11,9 +11,6 @@ PODS:
   - Firebase/Database (3.3.0):
     - Firebase/Analytics (= 3.3.0)
     - FirebaseDatabase (= 3.0.2)
-  - Firebase/Storage (3.3.0):
-    - Firebase/Analytics (= 3.3.0)
-    - FirebaseStorage (= 1.0.2)
   - FirebaseAnalytics (3.2.1):
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
@@ -27,9 +24,7 @@ PODS:
   - FirebaseDatabase (3.0.2):
     - FirebaseAnalytics (~> 3.2)
   - FirebaseInstanceID (1.0.7)
-  - FirebaseStorage (1.0.2):
-    - FirebaseAnalytics (~> 3.2)
-    - GoogleNetworkingUtilities (~> 1.2)
+  - Fusuma (0.5.1)
   - GoogleInterchangeUtilities (1.2.1):
     - GoogleSymbolUtilities (~> 1.0)
   - GoogleNetworkingUtilities (1.2.1):
@@ -42,14 +37,16 @@ PODS:
     - GoogleSymbolUtilities (~> 1.0)
   - MBProgressHUD (0.9.2)
   - MTBBarcodeScanner (2.0.2)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Firebase
   - Firebase/Auth
   - Firebase/Database
-  - Firebase/Storage
+  - Fusuma
   - MBProgressHUD
   - MTBBarcodeScanner
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Firebase: 6250071f0e2440a5c4c67b8cb6b868f868237ac3
@@ -57,7 +54,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 5efddc3fae47042b73585f083f956462be4f5b8e
   FirebaseDatabase: 59bea2e7dfd81b3b8b2f8e396caf1a52c2ced6f7
   FirebaseInstanceID: a9d923f3d0b6fbf9fac89310860357aaadc34be5
-  FirebaseStorage: fa2a87dee81f682f553af6839daa37a750e65f6a
+  Fusuma: b6b727aabfbf3fd40419393aa25959910d6598d1
   GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
   GoogleNetworkingUtilities: 3e83269048cfb498dc7ec83ab36813360965c74f
   GoogleParsingUtilities: 30b3896f9ee167dc78747f013d3de157ced1cadf
@@ -65,7 +62,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MTBBarcodeScanner: 18ab77ad8dfa31db96446c9325e86122d39425d6
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: f54482d0c387bc3a5b2f65e9279bfccc10e7f93b
+PODFILE CHECKSUM: ddaef4bfd43f1c74c232069135775701affe87fc
 
 COCOAPODS: 1.0.1

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import CoreImage
+import MBProgressHUD
 
 class CardsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet var collectionView: UICollectionView!
@@ -22,10 +23,15 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidLoad()
-        self.myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
-        myActivityIndicator.center = view.center
-        myActivityIndicator.startAnimating()
-        view.addSubview(myActivityIndicator)
+        let spinnerActivity = MBProgressHUD.showHUDAddedTo(self.view, animated: true);
+        
+        spinnerActivity.labelText = "Loading";
+        
+        spinnerActivity.userInteractionEnabled = false;
+//        self.myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+//        myActivityIndicator.center = view.center
+//        myActivityIndicator.startAnimating()
+//        view.addSubview(myActivityIndicator)
         self.cards.removeAll()
         self.usersSet.removeAll()
         self.tabBarController?.tabBar.hidden = false
@@ -70,7 +76,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
                     card.point = points
                     self.cards.append(card)
                     self.collectionView.reloadData()
-                    self.myActivityIndicator.stopAnimating()
+                    MBProgressHUD.hideAllHUDsForView(self.view, animated: true);
                     
                 }
             }
@@ -124,7 +130,11 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let logOutAction = UIAlertAction(title: "Log Out", style: .Default) { (action) in
             try! FIRAuth.auth()!.signOut()
             User.removeUserUid()
-            self.performSegueWithIdentifier("UnwindSegue", sender: self)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let navigationController = storyboard.instantiateViewControllerWithIdentifier("RootViewController") as? UIViewController{
+                self.presentViewController(navigationController, animated: true, completion: nil)
+            }
+            
         
         }
         alertController.addAction(logOutAction)
@@ -133,5 +143,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
             
         }
     }
+    
+    @IBAction func unwindToCardView(segue: UIStoryboardSegue) {}
     
 }

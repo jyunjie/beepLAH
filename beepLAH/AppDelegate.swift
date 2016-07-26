@@ -18,8 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FIRApp.configure()
-        // Override point for customization after application launch.
+        
+        if User.isSignedIn(){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("HomeNavigationController")
+            self.window?.rootViewController = viewController
+        }
+       
         return true
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
