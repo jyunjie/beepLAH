@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Add Card View Controller-->
+        <!--Add Cards-->
         <scene sceneID="ilH-UM-WhS">
             <objects>
                 <viewController id="Nxn-dA-YqY" customClass="AddCardViewController" customModule="beepLAH" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,13 +71,91 @@
                             <constraint firstItem="vyX-xu-Cml" firstAttribute="top" secondItem="1cg-xU-4YZ" secondAttribute="bottom" id="r6O-nX-rk3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Cards" id="TW3-14-OiS">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="DNH-E1-YgT">
+                            <connections>
+                                <segue destination="Wut-p0-yCz" kind="show" id="N3Z-cy-nMg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="vyX-xu-Cml" id="p6J-hw-pNs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="loh-CN-YIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2667" y="809"/>
+            <point key="canvasLocation" x="2378" y="817"/>
+        </scene>
+        <!--Scan Card View Controller-->
+        <scene sceneID="pkO-bx-mxB">
+            <objects>
+                <viewController id="Wut-p0-yCz" customClass="ScanCardViewController" customModule="beepLAH" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fLx-5Z-3Dt"/>
+                        <viewControllerLayoutGuide type="bottom" id="QOX-JX-XKa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vFV-IK-tvj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CMY-gt-3te">
+                                <rect key="frame" x="144" y="145" width="312" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="3zb-Nq-P7f"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YtG-Z7-iPM">
+                                <rect key="frame" x="0.0" y="100" width="600" height="115"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wO4-h5-Oc6">
+                                <rect key="frame" x="290" y="271" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcX-uP-nsa">
+                                <rect key="frame" x="204" y="513" width="193" height="30"/>
+                                <state key="normal" title="Choose an image to analyze"/>
+                                <connections>
+                                    <action selector="loadImageButtonTapped:" destination="Wut-p0-yCz" eventType="touchUpInside" id="BlX-o2-SNm"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="npU-gh-Toa">
+                                <rect key="frame" x="0.0" y="212" width="600" height="138"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="npU-gh-Toa" firstAttribute="centerX" secondItem="wO4-h5-Oc6" secondAttribute="centerX" id="2cf-e6-Dic"/>
+                            <constraint firstItem="wO4-h5-Oc6" firstAttribute="centerY" secondItem="npU-gh-Toa" secondAttribute="centerY" id="79B-go-rBc"/>
+                            <constraint firstAttribute="trailing" secondItem="YtG-Z7-iPM" secondAttribute="trailing" id="ENH-9J-nD9"/>
+                            <constraint firstItem="npU-gh-Toa" firstAttribute="trailing" secondItem="YtG-Z7-iPM" secondAttribute="trailing" id="H1I-DF-tep"/>
+                            <constraint firstItem="JcX-uP-nsa" firstAttribute="top" secondItem="CMY-gt-3te" secondAttribute="bottom" constant="96" id="KVG-LE-ume"/>
+                            <constraint firstItem="npU-gh-Toa" firstAttribute="leading" secondItem="YtG-Z7-iPM" secondAttribute="leading" id="P81-ps-8v9"/>
+                            <constraint firstItem="CMY-gt-3te" firstAttribute="centerY" secondItem="wO4-h5-Oc6" secondAttribute="centerY" id="Rdp-ew-Wal"/>
+                            <constraint firstItem="npU-gh-Toa" firstAttribute="top" secondItem="fLx-5Z-3Dt" secondAttribute="bottom" constant="148" id="UuM-f6-35e"/>
+                            <constraint firstItem="wO4-h5-Oc6" firstAttribute="centerX" secondItem="CMY-gt-3te" secondAttribute="centerX" id="X4Q-jf-1vd"/>
+                            <constraint firstItem="CMY-gt-3te" firstAttribute="top" secondItem="fLx-5Z-3Dt" secondAttribute="bottom" constant="81" id="h41-Fo-kgl"/>
+                            <constraint firstItem="wO4-h5-Oc6" firstAttribute="top" secondItem="YtG-Z7-iPM" secondAttribute="bottom" constant="56" id="hon-F0-PAc"/>
+                            <constraint firstItem="QOX-JX-XKa" firstAttribute="top" secondItem="JcX-uP-nsa" secondAttribute="bottom" constant="8" symbolic="YES" id="kmZ-Fm-v2n"/>
+                            <constraint firstItem="JcX-uP-nsa" firstAttribute="centerX" secondItem="wO4-h5-Oc6" secondAttribute="centerX" id="lzb-Xf-AXW"/>
+                            <constraint firstItem="YtG-Z7-iPM" firstAttribute="leading" secondItem="vFV-IK-tvj" secondAttribute="leading" id="vhH-g6-xkj"/>
+                            <constraint firstItem="YtG-Z7-iPM" firstAttribute="top" secondItem="fLx-5Z-3Dt" secondAttribute="bottom" constant="36" id="y9I-vF-eCp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceResults" destination="npU-gh-Toa" id="pfD-Vb-A5Z"/>
+                        <outlet property="imageView" destination="CMY-gt-3te" id="qgD-lM-5W7"/>
+                        <outlet property="labelResults" destination="YtG-Z7-iPM" id="SDU-XQ-kmI"/>
+                        <outlet property="spinner" destination="wO4-h5-Oc6" id="ncl-hi-9Kc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUh-KU-OZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3015" y="835"/>
         </scene>
         <!--User Profile Controller-->
         <scene sceneID="BeK-Br-Klk">
@@ -210,7 +288,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" id="sxG-nQ-B4p">
                             <connections>
-                                <segue destination="Nxn-dA-YqY" kind="show" id="jNl-cN-ZRu"/>
+                                <segue destination="Nxn-dA-YqY" kind="show" id="7gS-AT-fSm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -499,7 +577,7 @@
         <!--Login View Controller-->
         <scene sceneID="LA3-br-3tl">
             <objects>
-                <viewController id="Del-7O-MnB" customClass="LoginViewController" customModule="beepLAH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Del-7O-MnB" customClass="LoginViewController" customModule="beepLAH" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Qd-Ub-60l"/>
                         <viewControllerLayoutGuide type="bottom" id="pX8-ow-myu"/>
@@ -592,7 +670,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="59m-EH-LEF">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YoQ-dh-Do3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="YoQ-dh-Do3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="br9-TC-05I">
                         <autoresizingMask key="autoresizingMask"/>
@@ -657,6 +735,6 @@
         <image name="sb" width="549" height="832"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MpZ-R6-SHg"/>
+        <segue reference="5tZ-ke-S9L"/>
     </inferredMetricsTieBreakers>
 </document>

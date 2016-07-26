@@ -18,6 +18,8 @@
 		280CD2541D3E24AC00EF2957 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2531D3E24AC00EF2957 /* User.swift */; };
 		280CD2561D3E24D800EF2957 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2551D3E24D800EF2957 /* LoginViewController.swift */; };
 		280CD2581D3E2A4300EF2957 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2571D3E2A4300EF2957 /* CardsViewController.swift */; };
+		284297801D46540900E5B226 /* ScanCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842977F1D46540900E5B226 /* ScanCardViewController.swift */; };
+		284297821D46573800E5B226 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284297811D46573800E5B226 /* SwiftyJSON.framework */; };
 		28D9C7B01D40A892008656D9 /* QRCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7AF1D40A892008656D9 /* QRCameraViewController.swift */; };
 		28D9C7B21D40AA7F008656D9 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7B11D40AA7F008656D9 /* NewsletterViewController.swift */; };
 		28D9C7B41D40AAB4008656D9 /* NewsletterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7B31D40AAB4008656D9 /* NewsletterCollectionViewCell.swift */; };
@@ -48,6 +50,8 @@
 		280CD2531D3E24AC00EF2957 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		280CD2551D3E24D800EF2957 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		280CD2571D3E2A4300EF2957 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		2842977F1D46540900E5B226 /* ScanCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCardViewController.swift; sourceTree = "<group>"; };
+		284297811D46573800E5B226 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/beepLAH-fmxenpqpasblvxaxbnrwhigtfdfb/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		28D9C7AF1D40A892008656D9 /* QRCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCameraViewController.swift; sourceTree = "<group>"; };
 		28D9C7B11D40AA7F008656D9 /* NewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
 		28D9C7B31D40AAB4008656D9 /* NewsletterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284297821D46573800E5B226 /* SwiftyJSON.framework in Frameworks */,
 				B401A5C32FAE20309353121A /* Pods_beepLAH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				21EB27C31D41DE430021C7A7 /* UserProfileTableViewCell.swift */,
+				2842977F1D46540900E5B226 /* ScanCardViewController.swift */,
 				280CD23A1D3DD1BD00EF2957 /* AppDelegate.swift */,
 				280CD2511D3E247400EF2957 /* SignUpViewController.swift */,
 				280CD2531D3E24AC00EF2957 /* User.swift */,
@@ -141,6 +147,7 @@
 		FB8DDD78C3FE706FCE4DC99E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				284297811D46573800E5B226 /* SwiftyJSON.framework */,
 				BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */,
 			);
 			name = Frameworks;
@@ -279,6 +286,7 @@
 				21EB27C41D41DE430021C7A7 /* UserProfileTableViewCell.swift in Sources */,
 				21EB27C21D41C6C10021C7A7 /* userProfileController.swift in Sources */,
 				28D9C7B81D40ACB9008656D9 /* AddCardViewController.swift in Sources */,
+				284297801D46540900E5B226 /* ScanCardViewController.swift in Sources */,
 				28D9C80C1D45C2D0008656D9 /* MBProgressHUD.m in Sources */,
 				280CD23B1D3DD1BD00EF2957 /* AppDelegate.swift in Sources */,
 				280CD2561D3E24D800EF2957 /* LoginViewController.swift in Sources */,
@@ -351,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -391,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

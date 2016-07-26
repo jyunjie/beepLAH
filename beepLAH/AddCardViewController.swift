@@ -90,4 +90,10 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
             self.tableView.reloadData()
         })
     }
+    @IBAction func unWind(sender: UIBarButtonItem) {
+//        if let navigationController = storyboard!.instantiateViewControllerWithIdentifier("CardViewController") as? UIViewController{
+//            self.presentViewController(navigationController, animated: true, completion: nil)
+//        }
+        navigationController?.popViewControllerAnimated(true)
+    }
 }

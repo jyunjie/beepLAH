@@ -33,24 +33,7 @@ class LoginViewController: UIViewController {
         spinnerActivity.labelText = "Loading";
         
         spinnerActivity.userInteractionEnabled = false;
-        //        let pending = UIAlertController(title: "Logging in", message: nil, preferredStyle: .Alert)
-        //        pending.view.alpha = 0.2
-        //        //create an activity indicator
-        //        let rect = CGRect(
-        //            origin: CGPoint(x: 0, y: 0),
-        //            size: UIScreen.mainScreen().bounds.size
-        //        )
-        //        let indicator = UIActivityIndicatorView()
-        //        indicator.frame = rect
-        //        indicator.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        //        indicator.activityIndicatorViewStyle.hashValue
-        //        indicator.color = UIColor.blackColor()
-        
-        //add the activity indicator as a subview of the alert controller's view
-        //        pending.view.addSubview(indicator)
-        //        indicator.userInteractionEnabled = false
-        //        indicator.startAnimating()
-        //        self.presentViewController(pending, animated: false, completion: nil)
+
         FIRAuth.auth()?.signInWithEmail(email, password: password) { (user, error) in
             if let user = user {
                 User.signIn(user.uid)
