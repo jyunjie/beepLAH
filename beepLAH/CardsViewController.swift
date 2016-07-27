@@ -18,24 +18,31 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     var info = [String]()
     var cards = [Card]()
     var usersSet = Set<String>()
-    var myActivityIndicator = UIActivityIndicatorView()
     
     
-    override func viewWillAppear(animated: Bool) {
+    
+    override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
-        let spinnerActivity = MBProgressHUD.showHUDAddedTo(self.view, animated: true);
         
-        spinnerActivity.labelText = "Loading";
         
-        spinnerActivity.userInteractionEnabled = false;
-//        self.myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
-//        myActivityIndicator.center = view.center
-//        myActivityIndicator.startAnimating()
-//        view.addSubview(myActivityIndicator)
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.tabBarController?.tabBar.barTintColor = UIColor.redColor()
+        //        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
+        //        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.yellowColor()], forState:.Selected)
+        self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
+        self.title = "My Cards"
+        self.navigationController!.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let spinnerActivity = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        spinnerActivity.labelText = "Loading"
+        spinnerActivity.userInteractionEnabled = false
         self.cards.removeAll()
         self.usersSet.removeAll()
         self.tabBarController?.tabBar.hidden = false
         getUserSets()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +59,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let selectedItems = self.cards[indexPath.row]
         cell.cardMerchantName.text = selectedItems.name
         cell.cardImage.image = UIImage(named: selectedItems.name!)
-        cell.cardNumber.text = selectedItems.No
+        cell.cardNumber.text = selectedItems.point
         let image = generateQRCodeFromString(selectedItems.No! +  selectedItems.ownerName!)
         cell.QRImageView.image = image
         return cell
@@ -75,8 +82,9 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
                     let points =  cardInfos["Points"] as! String
                     card.point = points
                     self.cards.append(card)
-                    self.collectionView.reloadData()
                     MBProgressHUD.hideAllHUDsForView(self.view, animated: true);
+                    self.collectionView.reloadData()
+                    
                     
                 }
             }
@@ -109,6 +117,9 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
                     self.usersSet.insert(key)
                 }
             }
+            if self.usersSet.count == 0 {
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true);
+            }
             self.getUserCardInfo()
         })
         
@@ -123,7 +134,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         alertController.addAction(cancelAction)
         
         let OKAction = UIAlertAction(title: "Profile", style: .Default) { (action) in
-           self.performSegueWithIdentifier("ProfileSegue", sender: self)
+            self.performSegueWithIdentifier("ProfileSegue", sender: self)
         }
         alertController.addAction(OKAction)
         
@@ -135,7 +146,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
                 self.presentViewController(navigationController, animated: true, completion: nil)
             }
             
-        
+            
         }
         alertController.addAction(logOutAction)
         
@@ -144,6 +155,28 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     
+//    func collectionView(collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                               sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//        let size = CGSize(width: 413, height: 685)
+//        return size
+//    }
+    
+//    func collectionView(collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                               minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+//        return 1.0
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView, layout
+//        collectionViewLayout: UICollectionViewLayout,
+//        minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+//        return 1.0
+//    }
+    
+    
     @IBAction func unwindToCardView(segue: UIStoryboardSegue) {}
     
+    
 }
+

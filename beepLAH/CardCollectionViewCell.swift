@@ -10,7 +10,6 @@ import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet var cardMerchantName: UILabel!
-    
     @IBOutlet var cardImage: UIImageView!
     @IBOutlet var QRImageView: UIImageView!
     @IBOutlet var cardNumber: UILabel!

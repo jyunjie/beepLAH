@@ -13,22 +13,28 @@ class NewsletterViewController: UIViewController, UICollectionViewDelegate, UICo
     let firebaseRef = FIRDatabase.database().reference()
     var usersSet = Set<String>()
     var cards = [Card]()
+
+    
     @IBOutlet var collectionView: UICollectionView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.title = "Promotions"
+        self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
+        
         getUserSets()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     return self.cards.count
+        return self.cards.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -62,6 +68,20 @@ class NewsletterViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func getUserCardInfo() {
         let cardInfo = firebaseRef.child("cards")
+//        
+//        firebaseRef.child("users").child(User.currentUserUid()!).observeEventType(.Value, withBlock: {(snapshot) in
+//            if let userInfo = snapshot.value as? [String: AnyObject] {
+//                if let username = userInfo ["username"] as? String {
+//                    self.json.append(username)
+//                }
+//                if let datesignup = userInfo ["date"] as? String {
+//                    self.json.append(datesignup)
+//                }
+//                
+//            }
+//        })
+
+
         cardInfo.observeEventType(.ChildAdded, withBlock: { (snapshot) in
             //            let cardUIDs = snapshot.key
             if self.usersSet.contains(snapshot.key) {
@@ -77,7 +97,7 @@ class NewsletterViewController: UIViewController, UICollectionViewDelegate, UICo
                     card.point = points
                     self.cards.append(card)
                     self.collectionView.reloadData()
-
+                    
                     
                 }
             }
