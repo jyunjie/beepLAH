@@ -10,8 +10,10 @@ import UIKit
 
 class AddCardTableViewCell: UITableViewCell {
     @IBOutlet var cardLabel: UILabel!
-
+    
     @IBOutlet var cardImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

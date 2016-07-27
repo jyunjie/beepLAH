@@ -18,7 +18,12 @@ class QRCameraViewController: UIViewController {
     @IBOutlet weak var cameraScanningPreview: UIView!
     
     override func viewDidLoad() {
+        playVes()
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.title = "QR Scan"
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         scanner = MTBBarcodeScanner(previewView: self.cameraScanningPreview)
         
         

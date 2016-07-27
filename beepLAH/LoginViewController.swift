@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
     }
     
@@ -37,16 +39,13 @@ class LoginViewController: UIViewController {
         FIRAuth.auth()?.signInWithEmail(email, password: password) { (user, error) in
             if let user = user {
                 User.signIn(user.uid)
-                //                pending.dismissViewControllerAnimated(true, completion: {
-                //                    indicator.stopAnimating()
-                
+                print(self.view.backgroundColor)
                 self.performSegueWithIdentifier("HomeSegue", sender: nil)
                 MBProgressHUD.hideAllHUDsForView(self.view, animated: true);
                 
                 //                })
             }else{
-                //                pending.dismissViewControllerAnimated(true, completion:{
-                // show an alert controller to display the error(using the variable error localizedDescription)
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                 let controller = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .Alert)
                 let dismissButton = UIAlertAction(title: "Try Again", style: .Default, handler: nil)
                 controller.addAction(dismissButton)
@@ -72,6 +71,29 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if ((notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue()) != nil {
+            if view.frame.origin.y == 0{
+                self.view.frame.origin.y -= 150
+            }
+            else {
+                
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if ((notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue()) != nil {
+            if view.frame.origin.y != 0 {
+                self.view.frame.origin.y += 150
+            }
+            else {
+                
+            }
+        }
+    }
     
     
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
