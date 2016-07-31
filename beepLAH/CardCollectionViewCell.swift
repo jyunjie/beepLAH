@@ -11,6 +11,8 @@ import UIKit
 class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet var cardMerchantName: UILabel!
     @IBOutlet var cardImage: UIImageView!
-    @IBOutlet var QRImageView: UIImageView!
+//    @IBOutlet var QRImageView: UIImageView!
+    @IBOutlet weak var cardExpDate: UILabel!
     @IBOutlet var cardNumber: UILabel!
+    @IBOutlet weak var cardOwner: UILabel!
 }

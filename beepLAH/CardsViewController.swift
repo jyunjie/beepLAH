@@ -11,30 +11,24 @@ import Firebase
 import CoreImage
 import MBProgressHUD
 
-class CardsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CardsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UIPopoverPresentationControllerDelegate {
     @IBOutlet var collectionView: UICollectionView!
     
     let firebaseRef = FIRDatabase.database().reference()
     var info = [String]()
     var cards = [Card]()
     var usersSet = Set<String>()
-    
+    var selectedItems = Card()
     
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
-        
-        
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.tabBarController?.tabBar.barTintColor = UIColor.redColor()
-        //        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
-        //        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.yellowColor()], forState:.Selected)
-        self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
-        self.title = "My Cards"
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.505086, blue: 1, alpha: 0.5)
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        self.tabBarController?.tabBar.barTintColor = UIColor.init(red: 0, green: 0.505086, blue: 1, alpha: 1)
+        self.tabBarController?.tabBar.tintColor = UIColor.blackColor()
         self.navigationController!.navigationBar.titleTextAttributes =
-            [NSForegroundColorAttributeName: UIColor.whiteColor()]
+            [NSForegroundColorAttributeName: UIColor.blackColor()]
         let spinnerActivity = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         spinnerActivity.labelText = "Loading"
         spinnerActivity.userInteractionEnabled = false
@@ -58,10 +52,12 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = self.collectionView.dequeueReusableCellWithReuseIdentifier("CardCell", forIndexPath: indexPath) as! CardCollectionViewCell
         let selectedItems = self.cards[indexPath.row]
         cell.cardMerchantName.text = selectedItems.name
+        cell.cardOwner.text = selectedItems.ownerName
         cell.cardImage.image = UIImage(named: selectedItems.name!)
+        cell.cardExpDate.text = selectedItems.expDate
         cell.cardNumber.text = selectedItems.point
-        let image = generateQRCodeFromString(selectedItems.No! +  selectedItems.ownerName!)
-        cell.QRImageView.image = image
+        
+        //        cell.QRImageView.image = image
         return cell
     }
     
@@ -155,24 +151,50 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     
-//    func collectionView(collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                               sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-//        let size = CGSize(width: 413, height: 685)
-//        return size
-//    }
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        self.selectedItems = self.cards[indexPath.row]
+        print(indexPath.row)
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("popOverController") as! PopOverViewController
+        vc.preferredContentSize = CGSizeMake(350,260)
+        vc.array = self.selectedItems
+        let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = UIModalPresentationStyle.Popover
+        guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? CardCollectionViewCell else {return}
+        let popOver = navController.popoverPresentationController
+        popOver?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
+        popOver?.backgroundColor = UIColor.init(white: 1, alpha: 0.3)
+        popOver?.sourceView = cell.cardImage
+        popOver?.sourceRect = CGRectMake(0,110,0,0)
+        popOver?.delegate = self
+        
+        self.presentViewController(navController, animated: true, completion: nil)
+        
+    }
     
-//    func collectionView(collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                               minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-//        return 1.0
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, layout
-//        collectionViewLayout: UICollectionViewLayout,
-//        minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-//        return 1.0
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //        if let dest = segue.destinationViewController as? PopOverViewController{
+        //
+        //        }
+    }
+    
+    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    //    {
+    //        if segue.identifier == "showSegue"
+    //        {
+    //            let vc = segue.destinationViewController as! QRViewController
+    //            let controller = vc.popoverPresentationController
+    //            vc.array = self.selectedItems
+    //            if controller != nil
+    //            {
+    //                controller?.delegate = self
+    //            }
+    //        }
+    //    }
+    
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
     
     
     @IBAction func unwindToCardView(segue: UIStoryboardSegue) {}
