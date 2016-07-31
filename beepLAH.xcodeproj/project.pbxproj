@@ -18,7 +18,6 @@
 		280CD2541D3E24AC00EF2957 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2531D3E24AC00EF2957 /* User.swift */; };
 		280CD2561D3E24D800EF2957 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2551D3E24D800EF2957 /* LoginViewController.swift */; };
 		280CD2581D3E2A4300EF2957 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CD2571D3E2A4300EF2957 /* CardsViewController.swift */; };
-		284297801D46540900E5B226 /* ScanCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842977F1D46540900E5B226 /* ScanCardViewController.swift */; };
 		284297821D46573800E5B226 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284297811D46573800E5B226 /* SwiftyJSON.framework */; };
 		28D9C7B01D40A892008656D9 /* QRCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7AF1D40A892008656D9 /* QRCameraViewController.swift */; };
 		28D9C7B21D40AA7F008656D9 /* NewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C7B11D40AA7F008656D9 /* NewsletterViewController.swift */; };
@@ -32,6 +31,8 @@
 		28D9C7EF1D4500AC008656D9 /* Beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 28D9C7EE1D4500AC008656D9 /* Beep.wav */; };
 		28D9C8081D45AB3C008656D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D9C8071D45AB3C008656D9 /* Assets.xcassets */; };
 		28D9C80C1D45C2D0008656D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D9C80B1D45C2D0008656D9 /* MBProgressHUD.m */; };
+		28FBDA4D1D4B3D4C00DA5028 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBDA4C1D4B3D4C00DA5028 /* PopOverViewController.swift */; };
+		28FBDA4F1D4E413900DA5028 /* QuickScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBDA4E1D4E413900DA5028 /* QuickScanViewController.swift */; };
 		B401A5C32FAE20309353121A /* Pods_beepLAH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +51,6 @@
 		280CD2531D3E24AC00EF2957 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		280CD2551D3E24D800EF2957 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		280CD2571D3E2A4300EF2957 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
-		2842977F1D46540900E5B226 /* ScanCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCardViewController.swift; sourceTree = "<group>"; };
 		284297811D46573800E5B226 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/beepLAH-fmxenpqpasblvxaxbnrwhigtfdfb/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		28D9C7AF1D40A892008656D9 /* QRCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCameraViewController.swift; sourceTree = "<group>"; };
 		28D9C7B11D40AA7F008656D9 /* NewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsletterViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 		28D9C8091D45C2CF008656D9 /* beepLAH-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beepLAH-Bridging-Header.h"; sourceTree = "<group>"; };
 		28D9C80A1D45C2D0008656D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		28D9C80B1D45C2D0008656D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		28FBDA4C1D4B3D4C00DA5028 /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
+		28FBDA4E1D4E413900DA5028 /* QuickScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickScanViewController.swift; sourceTree = "<group>"; };
 		BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beepLAH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68B46F42001BFAFF6FC4D18 /* Pods-beepLAH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beepLAH.release.xcconfig"; path = "Pods/Target Support Files/Pods-beepLAH/Pods-beepLAH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,9 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				21EB27C31D41DE430021C7A7 /* UserProfileTableViewCell.swift */,
-				2842977F1D46540900E5B226 /* ScanCardViewController.swift */,
 				280CD23A1D3DD1BD00EF2957 /* AppDelegate.swift */,
-				280CD2511D3E247400EF2957 /* SignUpViewController.swift */,
 				280CD2531D3E24AC00EF2957 /* User.swift */,
 				28D9C7B71D40ACB9008656D9 /* AddCardViewController.swift */,
 				28D9C7C31D4396DE008656D9 /* AddCardTableViewCell.swift */,
@@ -125,14 +125,17 @@
 				28D9C80B1D45C2D0008656D9 /* MBProgressHUD.m */,
 				28D9C7BD1D40B484008656D9 /* Merchant.swift */,
 				280CD2551D3E24D800EF2957 /* LoginViewController.swift */,
+				280CD2511D3E247400EF2957 /* SignUpViewController.swift */,
 				280CD23E1D3DD1BD00EF2957 /* Main.storyboard */,
+				28FBDA4E1D4E413900DA5028 /* QuickScanViewController.swift */,
+				28FBDA4C1D4B3D4C00DA5028 /* PopOverViewController.swift */,
 				28D9C7BF1D40BDA7008656D9 /* CardCollectionViewCell.swift */,
+				280CD2571D3E2A4300EF2957 /* CardsViewController.swift */,
 				28D9C7B91D40AFDC008656D9 /* Card.swift */,
 				28D9C7B31D40AAB4008656D9 /* NewsletterCollectionViewCell.swift */,
 				28D9C7B11D40AA7F008656D9 /* NewsletterViewController.swift */,
 				28D9C7EE1D4500AC008656D9 /* Beep.wav */,
 				28D9C8071D45AB3C008656D9 /* Assets.xcassets */,
-				280CD2571D3E2A4300EF2957 /* CardsViewController.swift */,
 				28D9C7AF1D40A892008656D9 /* QRCameraViewController.swift */,
 				280CD2461D3DD1BD00EF2957 /* LaunchScreen.storyboard */,
 				280CD2491D3DD1BD00EF2957 /* Info.plist */,
@@ -286,7 +289,6 @@
 				21EB27C41D41DE430021C7A7 /* UserProfileTableViewCell.swift in Sources */,
 				21EB27C21D41C6C10021C7A7 /* userProfileController.swift in Sources */,
 				28D9C7B81D40ACB9008656D9 /* AddCardViewController.swift in Sources */,
-				284297801D46540900E5B226 /* ScanCardViewController.swift in Sources */,
 				28D9C80C1D45C2D0008656D9 /* MBProgressHUD.m in Sources */,
 				280CD23B1D3DD1BD00EF2957 /* AppDelegate.swift in Sources */,
 				280CD2561D3E24D800EF2957 /* LoginViewController.swift in Sources */,
@@ -294,6 +296,8 @@
 				28D9C7B21D40AA7F008656D9 /* NewsletterViewController.swift in Sources */,
 				28D9C7C41D4396DE008656D9 /* AddCardTableViewCell.swift in Sources */,
 				28D9C7BE1D40B484008656D9 /* Merchant.swift in Sources */,
+				28FBDA4D1D4B3D4C00DA5028 /* PopOverViewController.swift in Sources */,
+				28FBDA4F1D4E413900DA5028 /* QuickScanViewController.swift in Sources */,
 				280CD2431D3DD1BD00EF2957 /* beepLAH.xcdatamodeld in Sources */,
 				28D9C7B01D40A892008656D9 /* QRCameraViewController.swift in Sources */,
 				28D9C7BA1D40AFDC008656D9 /* Card.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 
 class AddCardTableViewCell: UITableViewCell {
-    @IBOutlet var cardLabel: UILabel!
+//    @IBOutlet var cardLabel: UILabel!
     
     @IBOutlet var cardImage: UIImageView!
     

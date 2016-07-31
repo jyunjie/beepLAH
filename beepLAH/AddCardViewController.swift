@@ -35,7 +35,7 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("AddCardCell", forIndexPath: indexPath) as! AddCardTableViewCell
         let items = self.merchantList[indexPath.row]
-        cell.cardLabel.text = items
+//        cell.cardLabel.text = items
         cell.cardImage.image = UIImage(named: items)
         return cell
     }

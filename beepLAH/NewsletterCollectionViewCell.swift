@@ -11,5 +11,6 @@ import UIKit
 class NewsletterCollectionViewCell: UICollectionViewCell {
     @IBOutlet var newsletterPosterImageView: UIImageView!
     @IBOutlet var cardImageView: UIImageView!
+//    @IBOutlet var testing: UIImageView!
     
 }
