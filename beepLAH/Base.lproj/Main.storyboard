@@ -291,7 +291,6 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="N7g-71-NYd" secondAttribute="trailing" id="E9X-RA-9Oh"/>
                             <constraint firstItem="N7g-71-NYd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PIL-w4-dAO"/>
@@ -320,7 +319,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="ZfW-Lb-ep4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1956" y="454"/>
+            <point key="canvasLocation" x="2208" y="390"/>
         </scene>
         <!--Pop Over View Controller-->
         <scene sceneID="Pho-Tt-sgY">
@@ -592,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqw-D9-frW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="1317"/>
+            <point key="canvasLocation" x="3350" y="1410"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cpP-a7-Q9V">
@@ -644,7 +643,6 @@
         <!--Newsletter View Controller-->
         <scene sceneID="y3h-90-2uL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xC6-N6-0Bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OQI-BW-x8g" customClass="NewsletterViewController" customModule="beepLAH" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eeh-Bv-2JS"/>
@@ -717,6 +715,7 @@
                         <outlet property="collectionView" destination="o8F-o9-NzC" id="b1k-Tj-nEe"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xC6-N6-0Bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2860" y="1393"/>
         </scene>
@@ -960,7 +959,6 @@
         <!--Newsletter-->
         <scene sceneID="ldm-1C-Tjr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AQg-in-5Ms" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mPM-S1-s2X" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Newsletter" image="basic_message" id="Ph5-Ue-2S0"/>
                     <toolbarItems/>
@@ -973,6 +971,7 @@
                         <segue destination="OQI-BW-x8g" kind="relationship" relationship="rootViewController" id="Uhf-a9-xbD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQg-in-5Ms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2008" y="1305"/>
         </scene>
