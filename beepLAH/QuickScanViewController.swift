@@ -10,6 +10,8 @@ import UIKit
 import Fusuma
 import SwiftyJSON
 import Firebase
+import MBProgressHUD
+
 
 class QuickScanViewController: UIViewController, FusumaDelegate {
     
@@ -40,7 +42,7 @@ class QuickScanViewController: UIViewController, FusumaDelegate {
     }
     
     func fusumaClosed() {
-        self.tabBarController?.selectedIndex = 0
+        self.tabBarController?.selectedIndex = 4
         firstLaunch = true
     }
     
@@ -49,7 +51,8 @@ class QuickScanViewController: UIViewController, FusumaDelegate {
         // Base64 encode the image and create the request
         let binaryImageData = base64EncodeImage(image)
         createRequest(binaryImageData)
-        self.tabBarController?.selectedIndex = 0
+        
+        fusumaClosed()
     }
     
     // When camera roll is not authorized, this method is called.
@@ -266,7 +269,7 @@ class QuickScanViewController: UIViewController, FusumaDelegate {
             let cardDict = ["Card Owner":cardOwnertextField.text!,"Name":(MerchantName),"CardNo":cardNotextField.text!,"Card Expiry Date": cardExpDatetextField.text!,"Points":"1000"] as [String:AnyObject]
             cardsInfoRef.setValue(cardDict)
             self.firebaseRef.child("users").child(User.currentUserUid()!).child("UserCards").child(cardUID).setValue(true)
-            self.fusumaClosed()
+//            self.fusumaClosed()
             self.navigationController?.popViewControllerAnimated(true)
             
         }))
@@ -275,11 +278,13 @@ class QuickScanViewController: UIViewController, FusumaDelegate {
             self.cardValue = ""
             self.finalValue = ""
             self.set.removeAll()
-            
+            self.tabBarController?.selectedIndex = 4
+            self.fusumaClosed()
         }))
         
         
         // 4. Present the alert.
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
         self.presentViewController(alert, animated: true, completion: nil)
     }
 }
