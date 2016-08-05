@@ -42,12 +42,13 @@ class QuickScanViewController: UIViewController, FusumaDelegate {
     }
     
     func fusumaClosed() {
+
         self.tabBarController?.selectedIndex = 4
         firstLaunch = true
     }
     
     func fusumaImageSelected(image: UIImage) {
-        
+
         // Base64 encode the image and create the request
         let binaryImageData = base64EncodeImage(image)
         createRequest(binaryImageData)

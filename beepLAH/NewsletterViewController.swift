@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MBProgressHUD
 
 class NewsletterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     let firebaseRef = FIRDatabase.database().reference()
@@ -22,7 +23,7 @@ class NewsletterViewController: UIViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         self.title = "Promotions"
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.505086, blue: 1, alpha: 0.5)
+//        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.505086, blue: 1, alpha: 0.5)
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
         getUserSets()

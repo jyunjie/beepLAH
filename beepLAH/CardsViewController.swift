@@ -23,9 +23,13 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.505086, blue: 1, alpha: 0.5)
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backdrop")!)
+        self.collectionView.backgroundColor = UIColor.clearColor()
+        self.tabBarController?.tabBar.layer.borderWidth = 0.5
+        self.tabBarController?.tabBar.layer.borderColor = UIColor.blackColor().CGColor
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
-        self.tabBarController?.tabBar.barTintColor = UIColor.init(red: 0, green: 0.505086, blue: 1, alpha: 1)
+//        self.tabBarController?.tabBar.barTintColor = UIColor.init(red: 0, green: 0.505086, blue: 1, alpha: 1)
         self.tabBarController?.tabBar.tintColor = UIColor.blackColor()
         self.navigationController!.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName: UIColor.blackColor()]
