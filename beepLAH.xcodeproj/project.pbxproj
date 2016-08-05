@@ -34,6 +34,8 @@
 		28FBDA4D1D4B3D4C00DA5028 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBDA4C1D4B3D4C00DA5028 /* PopOverViewController.swift */; };
 		28FBDA4F1D4E413900DA5028 /* QuickScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBDA4E1D4E413900DA5028 /* QuickScanViewController.swift */; };
 		B401A5C32FAE20309353121A /* Pods_beepLAH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */; };
+		BB0D3A8F1D51A44E00738D3F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0D3A8E1D51A44E00738D3F /* MapKit.framework */; };
+		BB0D3A911D51A46600738D3F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D3A901D51A46600738D3F /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		28D9C80B1D45C2D0008656D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		28FBDA4C1D4B3D4C00DA5028 /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		28FBDA4E1D4E413900DA5028 /* QuickScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickScanViewController.swift; sourceTree = "<group>"; };
+		BB0D3A8E1D51A44E00738D3F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BB0D3A901D51A46600738D3F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beepLAH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68B46F42001BFAFF6FC4D18 /* Pods-beepLAH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beepLAH.release.xcconfig"; path = "Pods/Target Support Files/Pods-beepLAH/Pods-beepLAH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB0D3A8F1D51A44E00738D3F /* MapKit.framework in Frameworks */,
 				284297821D46573800E5B226 /* SwiftyJSON.framework in Frameworks */,
 				B401A5C32FAE20309353121A /* Pods_beepLAH.framework in Frameworks */,
 			);
@@ -127,6 +132,7 @@
 				280CD2551D3E24D800EF2957 /* LoginViewController.swift */,
 				280CD2511D3E247400EF2957 /* SignUpViewController.swift */,
 				280CD23E1D3DD1BD00EF2957 /* Main.storyboard */,
+				BB0D3A901D51A46600738D3F /* MapViewController.swift */,
 				28FBDA4E1D4E413900DA5028 /* QuickScanViewController.swift */,
 				28FBDA4C1D4B3D4C00DA5028 /* PopOverViewController.swift */,
 				28D9C7BF1D40BDA7008656D9 /* CardCollectionViewCell.swift */,
@@ -150,6 +156,7 @@
 		FB8DDD78C3FE706FCE4DC99E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB0D3A8E1D51A44E00738D3F /* MapKit.framework */,
 				284297811D46573800E5B226 /* SwiftyJSON.framework */,
 				BEA08162BC5B8B6D1FC1C04F /* Pods_beepLAH.framework */,
 			);
@@ -191,7 +198,7 @@
 				TargetAttributes = {
 					280CD2361D3DD1BD00EF2957 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = CNM7RG984D;
+						DevelopmentTeam = K8S26WV5H4;
 					};
 				};
 			};
@@ -285,6 +292,7 @@
 				280CD2541D3E24AC00EF2957 /* User.swift in Sources */,
 				280CD2521D3E247400EF2957 /* SignUpViewController.swift in Sources */,
 				280CD2581D3E2A4300EF2957 /* CardsViewController.swift in Sources */,
+				BB0D3A911D51A46600738D3F /* MapViewController.swift in Sources */,
 				28D9C7B41D40AAB4008656D9 /* NewsletterCollectionViewCell.swift in Sources */,
 				21EB27C41D41DE430021C7A7 /* UserProfileTableViewCell.swift in Sources */,
 				21EB27C21D41C6C10021C7A7 /* userProfileController.swift in Sources */,
@@ -422,7 +430,7 @@
 				INFOPLIST_FILE = beepLAH/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.JJ.beepLAH2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JJ.beepLAH25;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beepLAH/beepLAH-Bridging-Header.h";
@@ -441,7 +449,7 @@
 				INFOPLIST_FILE = beepLAH/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.JJ.beepLAH2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JJ.beepLAH25;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beepLAH/beepLAH-Bridging-Header.h";

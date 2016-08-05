@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 
 class Card {
+    static var currentCard = Card()
     
     var No: String?
     var name: String?
