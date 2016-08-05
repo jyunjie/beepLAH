@@ -34,6 +34,8 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("AddCardCell", forIndexPath: indexPath) as! AddCardTableViewCell
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = UIColor.blackColor().CGColor
         let items = self.merchantList[indexPath.row]
 //        cell.cardLabel.text = items
         cell.cardImage.image = UIImage(named: items)
@@ -71,6 +73,7 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
             cardsInfoRef.setValue(cardDict)
             self.firebaseRef.child("users").child(User.currentUserUid()!).child("UserCards").child(cardUID).setValue(true)
             self.navigationController?.popViewControllerAnimated(true)
+            self.tabBarController?.tabBar.hidden = false
             
         }))
         
