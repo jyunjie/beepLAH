@@ -20,8 +20,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     var usersSet = Set<String>()
     var selectedItems = Card()
     
-    
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.505086, blue: 1, alpha: 0.5)
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
@@ -32,13 +31,11 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let spinnerActivity = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         spinnerActivity.labelText = "Loading"
         spinnerActivity.userInteractionEnabled = false
-        self.cards.removeAll()
-        self.usersSet.removeAll()
         self.tabBarController?.tabBar.hidden = false
         getUserSets()
-        
     }
     
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -80,8 +77,7 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
                     self.cards.append(card)
                     MBProgressHUD.hideAllHUDsForView(self.view, animated: true);
                     self.collectionView.reloadData()
-                    
-                    
+                    self.saveCurrentCard()                    
                 }
             }
             
@@ -103,6 +99,26 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
         
         return nil
+    }
+    
+//    -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    float currentPage = self.collectionView.contentOffset.x / self.collectionView.frame.size.width;
+//    self.pageControl.currentPage = ceil(currentPage);
+//    
+//    NSLog(@"Values: %f %f %f", self.collectionView.contentOffset.x, self.collectionView.frame.size.width, ceil(currentIndex));
+//    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        saveCurrentCard()
+    }
+    
+    func saveCurrentCard(){
+        let currentPage = self.collectionView.contentOffset.x / self.collectionView.frame.size.width;
+        let index = Int(currentPage)
+        
+        let card = cards[index]
+        
+        Card.currentCard = card
     }
     
     func getUserSets() {
