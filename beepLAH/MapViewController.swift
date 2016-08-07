@@ -45,8 +45,11 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
             // clear all mapAnnotation
             let allAnnotations = self.mapView.annotations
             self.mapView.removeAnnotations(allAnnotations)
+            if Card.currentCard.name == nil {
+                Card.currentCard.name = ""
+            }else{
             self.findStalls(currentLocation, categoryString: Card.currentCard.name!)
-            
+            }
             // check that there is location
             // if yes
             // run the natural search

@@ -38,7 +38,10 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.tabBarController?.tabBar.hidden = false
         getUserSets()
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.tabBarController?.tabBar.hidden = false
+    }
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -119,10 +122,12 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func saveCurrentCard(){
         let currentPage = self.collectionView.contentOffset.x / self.collectionView.frame.size.width;
         let index = Int(currentPage)
-        
+        if cards.count == 0 {
+            
+        }else{
         let card = cards[index]
-        
         Card.currentCard = card
+        }
     }
     
     func getUserSets() {
