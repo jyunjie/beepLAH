@@ -22,7 +22,8 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.cards.removeAll()
+        self.usersSet.removeAll()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backdrop")!)
         self.collectionView.backgroundColor = UIColor.clearColor()
         self.tabBarController?.tabBar.layer.borderWidth = 0.5
@@ -36,10 +37,13 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
         spinnerActivity.labelText = "Loading"
         spinnerActivity.userInteractionEnabled = false
         self.tabBarController?.tabBar.hidden = false
-        getUserSets()
+        
     }
     override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidLoad()
+        self.cards.removeAll()
+        self.usersSet.removeAll()
+        getUserSets()
         self.tabBarController?.tabBar.hidden = false
     }
   

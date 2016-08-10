@@ -69,7 +69,7 @@ class AddCardViewController: UIViewController,UITableViewDelegate, UITableViewDa
             
             let cardUID = NSUUID().UUIDString
             let cardsInfoRef = self.firebaseRef.child("cards").child(cardUID)
-            let cardDict = ["Card Owner":cardOwnertextField.text!,"Name":(self.merchantList[indexPath.row]),"CardNo":cardNotextField.text!,"Card Expiry Date": cardExpDatetextField.text!,"Points":"1000"] as [String:AnyObject]
+            let cardDict = ["Card Owner":cardOwnertextField.text!,"Name":(self.merchantList[indexPath.row]),"CardNo":cardNotextField.text!,"Card Expiry Date": cardExpDatetextField.text!,"Points":"0"] as [String:AnyObject]
             cardsInfoRef.setValue(cardDict)
             self.firebaseRef.child("users").child(User.currentUserUid()!).child("UserCards").child(cardUID).setValue(true)
             self.navigationController?.popViewControllerAnimated(true)
