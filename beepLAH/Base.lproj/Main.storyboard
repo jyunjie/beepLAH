@@ -102,7 +102,7 @@
                                                     <rect key="frame" x="15" y="12" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eQn-hC-KpO">
@@ -146,7 +146,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N7g-71-NYd">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fk2-oR-wJY">
                                     <size key="itemSize" width="372" height="471"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -162,113 +162,116 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hcn-Yb-Tug">
-                                                    <rect key="frame" x="41" y="231" width="290" height="174"/>
+                                                    <rect key="frame" x="33" y="226" width="290" height="174"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMb-wD-bTX">
-                                                    <rect key="frame" x="135" y="97" width="229" height="44"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="159" y="97" width="229" height="44"/>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGC-PO-Oms">
-                                                    <rect key="frame" x="17" y="8" width="93" height="34"/>
+                                                    <rect key="frame" x="41" y="8" width="93" height="34"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="93" id="Znl-6T-Im8"/>
-                                                        <constraint firstAttribute="height" constant="34" id="cH3-t7-ncy"/>
+                                                        <constraint firstAttribute="height" constant="34" id="HuH-Ri-wbe"/>
+                                                        <constraint firstAttribute="width" constant="93" id="Og5-DU-GMW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDZ-Lp-iWV">
-                                                    <rect key="frame" x="15" y="52" width="93" height="38"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="38" id="J0w-eh-SXa"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErB-XX-hau">
-                                                    <rect key="frame" x="135" y="8" width="237" height="34"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="159" y="8" width="237" height="34"/>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merchant :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbb-vC-DNT">
-                                                    <rect key="frame" x="15" y="102" width="93" height="38"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="41" y="100" width="93" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="38" id="KPe-Dg-YIu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exp Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu0-rT-6Jk">
-                                                    <rect key="frame" x="17" y="149" width="93" height="38"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="41" y="149" width="93" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="38" id="k0t-U4-tIr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0md-Fg-fXD">
-                                                    <rect key="frame" x="135" y="148" width="229" height="42"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="159" y="148" width="229" height="42"/>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ℹ️  Tap anywhere for card barcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ART-uA-7bq">
-                                                    <rect key="frame" x="35" y="432" width="323" height="30"/>
-                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                    <rect key="frame" x="35" y="433" width="323" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Phg-b9-QkB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIX-hm-yyB">
-                                                    <rect key="frame" x="135" y="52" width="229" height="38"/>
+                                                    <rect key="frame" x="159" y="52" width="229" height="38"/>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDZ-Lp-iWV">
+                                                    <rect key="frame" x="41" y="52" width="93" height="38"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="38" id="sPh-Qa-BHe"/>
+                                                        <constraint firstAttribute="height" constant="38" id="mWV-dK-ZFb"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="0md-Fg-fXD" firstAttribute="leading" secondItem="hMb-wD-bTX" secondAttribute="leading" id="0W7-5M-iAn"/>
-                                            <constraint firstItem="0md-Fg-fXD" firstAttribute="top" secondItem="hMb-wD-bTX" secondAttribute="bottom" constant="7" id="0tq-L8-386"/>
-                                            <constraint firstItem="ErB-XX-hau" firstAttribute="leading" secondItem="fGC-PO-Oms" secondAttribute="trailing" constant="25" id="7se-1X-lf1"/>
-                                            <constraint firstItem="fGC-PO-Oms" firstAttribute="top" secondItem="jlN-cD-xWc" secondAttribute="topMargin" id="EOC-nd-QEf"/>
-                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="leading" secondItem="pbb-vC-DNT" secondAttribute="leading" id="Et9-43-urp"/>
+                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="trailing" secondItem="fGC-PO-Oms" secondAttribute="trailing" id="3dx-1G-Lwv"/>
+                                            <constraint firstItem="Hcn-Yb-Tug" firstAttribute="top" secondItem="0md-Fg-fXD" secondAttribute="bottom" constant="36" id="52E-Kb-Cuy"/>
+                                            <constraint firstItem="pbb-vC-DNT" firstAttribute="top" secondItem="TDZ-Lp-iWV" secondAttribute="bottom" constant="10" id="7Rw-Pd-n27"/>
+                                            <constraint firstItem="Hcn-Yb-Tug" firstAttribute="leading" secondItem="jlN-cD-xWc" secondAttribute="leadingMargin" constant="25" id="C3w-Dt-GGf"/>
+                                            <constraint firstItem="hMb-wD-bTX" firstAttribute="top" secondItem="pIX-hm-yyB" secondAttribute="bottom" constant="7" id="Cu2-h3-Mow"/>
+                                            <constraint firstItem="pbb-vC-DNT" firstAttribute="trailing" secondItem="zu0-rT-6Jk" secondAttribute="trailing" id="DLQ-Af-Kcf"/>
                                             <constraint firstItem="Hcn-Yb-Tug" firstAttribute="leading" secondItem="jlN-cD-xWc" secondAttribute="leadingMargin" constant="59" id="F3b-0j-g65"/>
-                                            <constraint firstItem="pIX-hm-yyB" firstAttribute="leading" secondItem="hMb-wD-bTX" secondAttribute="leading" id="Fcf-59-qdx"/>
-                                            <constraint firstItem="ART-uA-7bq" firstAttribute="bottom" secondItem="jlN-cD-xWc" secondAttribute="bottomMargin" constant="-1" id="JFX-uZ-NHx"/>
-                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="top" secondItem="fGC-PO-Oms" secondAttribute="bottom" constant="10" id="PNt-hj-6Sr"/>
-                                            <constraint firstItem="fGC-PO-Oms" firstAttribute="baseline" secondItem="ErB-XX-hau" secondAttribute="baseline" id="RwS-i5-inP"/>
-                                            <constraint firstItem="Hcn-Yb-Tug" firstAttribute="top" secondItem="pbb-vC-DNT" secondAttribute="bottom" constant="91" id="Tqy-y2-o3r"/>
-                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="trailing" secondItem="pbb-vC-DNT" secondAttribute="trailing" id="UIy-xw-SdI"/>
-                                            <constraint firstItem="zu0-rT-6Jk" firstAttribute="leading" secondItem="pbb-vC-DNT" secondAttribute="leading" constant="2" id="ULd-9T-mB1"/>
-                                            <constraint firstItem="zu0-rT-6Jk" firstAttribute="top" secondItem="pbb-vC-DNT" secondAttribute="bottom" constant="9" id="W7v-x2-nuf"/>
+                                            <constraint firstItem="pbb-vC-DNT" firstAttribute="centerY" secondItem="hMb-wD-bTX" secondAttribute="centerY" id="Fvt-hk-TcA"/>
+                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="top" secondItem="fGC-PO-Oms" secondAttribute="bottom" constant="10" id="GMv-yA-r4K"/>
+                                            <constraint firstItem="ART-uA-7bq" firstAttribute="bottom" secondItem="jlN-cD-xWc" secondAttribute="bottomMargin" id="Gbf-sD-925"/>
+                                            <constraint firstItem="hMb-wD-bTX" firstAttribute="trailing" secondItem="0md-Fg-fXD" secondAttribute="trailing" id="HhW-xp-Aev"/>
+                                            <constraint firstItem="ART-uA-7bq" firstAttribute="leading" secondItem="jlN-cD-xWc" secondAttribute="leadingMargin" constant="27" id="P13-Iz-Ms9"/>
+                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="leading" secondItem="pbb-vC-DNT" secondAttribute="leading" id="PA4-dq-4Dz"/>
+                                            <constraint firstItem="hMb-wD-bTX" firstAttribute="leading" secondItem="0md-Fg-fXD" secondAttribute="leading" id="PHf-UW-KNQ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="pIX-hm-yyB" secondAttribute="trailing" constant="-24" id="RRN-QB-ZvF"/>
+                                            <constraint firstItem="ErB-XX-hau" firstAttribute="leading" secondItem="fGC-PO-Oms" secondAttribute="trailing" constant="25" id="RtH-qM-yA1"/>
+                                            <constraint firstItem="pIX-hm-yyB" firstAttribute="leading" secondItem="hMb-wD-bTX" secondAttribute="leading" id="S8E-mR-JLd"/>
+                                            <constraint firstItem="ErB-XX-hau" firstAttribute="leading" secondItem="pIX-hm-yyB" secondAttribute="leading" id="UXa-ku-mUd"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Hcn-Yb-Tug" secondAttribute="trailing" constant="41" id="VBk-QB-xvx"/>
+                                            <constraint firstItem="fGC-PO-Oms" firstAttribute="top" secondItem="jlN-cD-xWc" secondAttribute="topMargin" id="VMR-tz-DtM"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Hcn-Yb-Tug" secondAttribute="trailing" constant="41" id="Ygq-EA-9z9"/>
-                                            <constraint firstItem="Hcn-Yb-Tug" firstAttribute="top" secondItem="jlN-cD-xWc" secondAttribute="topMargin" constant="223" id="Z4x-1F-ilv"/>
-                                            <constraint firstItem="pIX-hm-yyB" firstAttribute="trailing" secondItem="jlN-cD-xWc" secondAttribute="trailingMargin" id="aUi-gj-NUD"/>
-                                            <constraint firstItem="fGC-PO-Oms" firstAttribute="trailing" secondItem="TDZ-Lp-iWV" secondAttribute="trailing" constant="2" id="c67-A5-6tY"/>
-                                            <constraint firstItem="zu0-rT-6Jk" firstAttribute="baseline" secondItem="0md-Fg-fXD" secondAttribute="baseline" constant="-3" id="cyf-hY-eGn"/>
-                                            <constraint firstItem="fGC-PO-Oms" firstAttribute="leading" secondItem="TDZ-Lp-iWV" secondAttribute="leading" constant="2" id="dL2-VB-7Wd"/>
-                                            <constraint firstAttribute="trailing" secondItem="ErB-XX-hau" secondAttribute="trailing" id="fIL-BP-tQ9"/>
-                                            <constraint firstItem="Hcn-Yb-Tug" firstAttribute="centerX" secondItem="jlN-cD-xWc" secondAttribute="centerX" id="gbZ-YY-fLa"/>
-                                            <constraint firstItem="zu0-rT-6Jk" firstAttribute="trailing" secondItem="pbb-vC-DNT" secondAttribute="trailing" constant="2" id="gj8-A5-k7Q"/>
-                                            <constraint firstItem="fGC-PO-Oms" firstAttribute="leading" secondItem="jlN-cD-xWc" secondAttribute="leadingMargin" constant="9" id="hdN-9Q-iMH"/>
-                                            <constraint firstItem="fGC-PO-Oms" firstAttribute="firstBaseline" secondItem="ErB-XX-hau" secondAttribute="firstBaseline" id="hrc-2J-EGf"/>
-                                            <constraint firstItem="0md-Fg-fXD" firstAttribute="trailing" secondItem="hMb-wD-bTX" secondAttribute="trailing" id="kzv-Tb-nGv"/>
-                                            <constraint firstItem="pbb-vC-DNT" firstAttribute="top" secondItem="TDZ-Lp-iWV" secondAttribute="bottom" constant="12" id="lEY-eL-Ppb"/>
-                                            <constraint firstItem="hMb-wD-bTX" firstAttribute="top" secondItem="pIX-hm-yyB" secondAttribute="bottom" constant="7" id="mEU-jT-MFg"/>
-                                            <constraint firstItem="ART-uA-7bq" firstAttribute="top" secondItem="Hcn-Yb-Tug" secondAttribute="bottom" constant="27" id="o6e-Ku-2am"/>
-                                            <constraint firstItem="Hcn-Yb-Tug" firstAttribute="top" secondItem="zu0-rT-6Jk" secondAttribute="bottom" constant="44" id="oka-iX-FDw"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="Hcn-Yb-Tug" secondAttribute="bottom" constant="58" id="q7q-bX-6S9"/>
-                                            <constraint firstItem="pbb-vC-DNT" firstAttribute="baseline" secondItem="hMb-wD-bTX" secondAttribute="baseline" constant="-1" id="rzV-Ex-hs0"/>
-                                            <constraint firstItem="Hcn-Yb-Tug" firstAttribute="leading" secondItem="jlN-cD-xWc" secondAttribute="leadingMargin" constant="33" id="sLG-dg-PA3"/>
-                                            <constraint firstItem="pIX-hm-yyB" firstAttribute="top" secondItem="ErB-XX-hau" secondAttribute="bottom" constant="10" id="tuL-lf-eE0"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="ART-uA-7bq" secondAttribute="trailing" constant="6" id="wqo-NZ-tb8"/>
-                                            <constraint firstItem="pIX-hm-yyB" firstAttribute="trailing" secondItem="hMb-wD-bTX" secondAttribute="trailing" id="xBB-4l-A9E"/>
-                                            <constraint firstItem="ART-uA-7bq" firstAttribute="leading" secondItem="jlN-cD-xWc" secondAttribute="leadingMargin" constant="27" id="ykf-wl-XHZ"/>
-                                            <constraint firstItem="ErB-XX-hau" firstAttribute="leading" secondItem="pIX-hm-yyB" secondAttribute="leading" id="zGY-f0-x9o"/>
+                                            <constraint firstItem="zu0-rT-6Jk" firstAttribute="top" secondItem="pbb-vC-DNT" secondAttribute="bottom" constant="11" id="a9w-0U-1Do"/>
+                                            <constraint firstItem="ErB-XX-hau" firstAttribute="baseline" secondItem="fGC-PO-Oms" secondAttribute="baseline" id="cgM-Hk-EYv"/>
+                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="leading" secondItem="jlN-cD-xWc" secondAttribute="leadingMargin" constant="33" id="dWX-Q3-vz4"/>
+                                            <constraint firstItem="pbb-vC-DNT" firstAttribute="leading" secondItem="zu0-rT-6Jk" secondAttribute="leading" id="dxT-0h-JMk"/>
+                                            <constraint firstItem="Hcn-Yb-Tug" firstAttribute="top" secondItem="zu0-rT-6Jk" secondAttribute="bottom" constant="39" id="eS5-7Q-wys"/>
+                                            <constraint firstItem="pIX-hm-yyB" firstAttribute="trailing" secondItem="hMb-wD-bTX" secondAttribute="trailing" id="emr-Gm-hFR"/>
+                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="leading" secondItem="fGC-PO-Oms" secondAttribute="leading" id="euz-e4-a0C"/>
+                                            <constraint firstItem="0md-Fg-fXD" firstAttribute="top" secondItem="hMb-wD-bTX" secondAttribute="bottom" constant="7" id="fPB-X5-Ah4"/>
+                                            <constraint firstItem="ErB-XX-hau" firstAttribute="firstBaseline" secondItem="fGC-PO-Oms" secondAttribute="firstBaseline" id="fvG-gJ-M5q"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ErB-XX-hau" secondAttribute="trailing" constant="-32" id="pc5-YJ-wDL"/>
+                                            <constraint firstItem="ART-uA-7bq" firstAttribute="top" secondItem="Hcn-Yb-Tug" secondAttribute="bottom" constant="33" id="wY1-bl-rm7"/>
+                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="baseline" secondItem="pIX-hm-yyB" secondAttribute="baseline" id="xXE-Kg-Odi"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ART-uA-7bq" secondAttribute="trailing" constant="6" id="z9p-BU-8cd"/>
+                                            <constraint firstItem="TDZ-Lp-iWV" firstAttribute="firstBaseline" secondItem="pIX-hm-yyB" secondAttribute="firstBaseline" id="zja-Vd-kb5"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">

@@ -21,8 +21,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
@@ -143,7 +142,6 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         request.destination = mapItem
         request.requestsAlternateRoutes = true
         request.transportType = .Automobile
-        
         let direction = MKDirections(request: request)
         direction.calculateDirectionsWithCompletionHandler { (response, error) in
             if let response = response {
