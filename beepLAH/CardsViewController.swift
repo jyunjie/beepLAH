@@ -22,9 +22,8 @@ class CardsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.cards.removeAll()
-        self.usersSet.removeAll()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backdrop")!)
+        
+        self.view.backgroundColor = UIColor.whiteColor()
         self.collectionView.backgroundColor = UIColor.clearColor()
         self.tabBarController?.tabBar.layer.borderWidth = 0.5
         self.tabBarController?.tabBar.layer.borderColor = UIColor.blackColor().CGColor
